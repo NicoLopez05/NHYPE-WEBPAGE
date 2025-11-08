@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import { useState } from "react"
 import { Menu, X } from "lucide-react"
 
@@ -16,7 +17,7 @@ export default function Header() {
   return (
     <header className="fixed top-0 w-full bg-background/95 backdrop-blur border-b border-border z-50">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-        <div className="flex items-center gap-2">
+        <Link href="/" className="flex items-center gap-2">
           <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center">
             <span className="text-primary-foreground font-bold text-lg" style={{ fontFamily: "Poppins" }}>
               N
@@ -25,7 +26,7 @@ export default function Header() {
           <span className="font-bold text-xl text-foreground" style={{ fontFamily: "Poppins" }}>
             NHYPE
           </span>
-        </div>
+        </Link>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex gap-8">
@@ -41,9 +42,12 @@ export default function Header() {
         </div>
 
         <div className="hidden md:flex gap-4">
-          <button className="px-6 py-2 rounded-full bg-primary text-primary-foreground font-semibold hover:bg-opacity-90 transition-all">
-            Contactar
-          </button>
+          <Link
+            href="/demo"
+            className="px-6 py-2 rounded-full bg-primary text-primary-foreground font-semibold hover:bg-opacity-90 transition-all"
+          >
+            Demo Gratis
+          </Link>
         </div>
 
         {/* Mobile Menu Button */}
@@ -65,9 +69,13 @@ export default function Header() {
                   {link.label}
                 </a>
               ))}
-              <button className="w-full px-6 py-2 rounded-full bg-primary text-primary-foreground font-semibold hover:bg-opacity-90 transition-all">
-                Contactar
-              </button>
+              <Link
+                href="/demo"
+                className="w-full px-6 py-2 rounded-full bg-primary text-primary-foreground font-semibold hover:bg-opacity-90 transition-all text-center"
+                onClick={() => setIsOpen(false)}
+              >
+                Demo Gratis
+              </Link>
             </div>
           </div>
         )}

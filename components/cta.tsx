@@ -1,5 +1,7 @@
 "use client"
 
+import Link from "next/link"
+
 export default function CTA() {
   return (
     <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-background">
@@ -18,13 +20,19 @@ export default function CTA() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-8 py-4 bg-white text-primary font-bold rounded-full hover:shadow-lg hover:scale-105 transition-all text-lg">
+            <Link
+              href="/demo"
+              className="px-8 py-4 bg-white text-primary font-bold rounded-full hover:shadow-lg hover:scale-105 transition-all text-lg inline-block text-center"
+            >
               Solicitar Demo Gratis
-            </button>
+            </Link>
 
-            <button className="px-8 py-4 border-2 border-white text-white font-bold rounded-full hover:bg-white hover:text-primary transition-all text-lg">
+            <Link
+              href="/casos-exito"
+              className="px-8 py-4 border-2 border-white text-white font-bold rounded-full hover:bg-white hover:text-primary transition-all text-lg inline-block text-center"
+            >
               Ver Casos de Éxito
-            </button>
+            </Link>
           </div>
 
           <p className="text-white/80 text-sm mt-8">

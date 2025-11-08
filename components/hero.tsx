@@ -1,5 +1,8 @@
 "use client"
 
+import Link from "next/link"
+import { Clapperboard } from "lucide-react"
+
 export default function Hero() {
   return (
     <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background via-background to-muted">
@@ -20,12 +23,18 @@ export default function Hero() {
               crear videos personalizados de alto impacto.
             </p>
             <div className="flex gap-4 pt-4">
-              <button className="px-8 py-3 rounded-full bg-primary text-primary-foreground font-bold hover:shadow-lg hover:scale-105 transition-all">
+              <Link
+                href="/demo"
+                className="px-8 py-3 rounded-full bg-primary text-primary-foreground font-bold hover:shadow-lg hover:scale-105 transition-all inline-block"
+              >
                 Comenzar Ahora
-              </button>
-              <button className="px-8 py-3 rounded-full border-2 border-primary text-primary font-bold hover:bg-primary hover:text-primary-foreground transition-all">
+              </Link>
+              <Link
+                href="/portafolio"
+                className="px-8 py-3 rounded-full border-2 border-primary text-primary font-bold hover:bg-primary hover:text-primary-foreground transition-all inline-block"
+              >
                 Ver Portafolio
-              </button>
+              </Link>
             </div>
           </div>
 
@@ -69,5 +78,3 @@ export default function Hero() {
     </section>
   )
 }
-
-import { Clapperboard } from "lucide-react"

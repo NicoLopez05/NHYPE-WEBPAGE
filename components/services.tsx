@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import { Film, Sparkles, TrendingUp } from "lucide-react"
 
 const services = [
@@ -73,9 +74,12 @@ export default function Services() {
                     ))}
                   </div>
 
-                  <button className="w-full mt-6 py-2 rounded-lg border border-primary text-primary hover:bg-primary hover:text-primary-foreground font-semibold transition-all">
+                  <Link
+                    href="/demo"
+                    className="w-full mt-6 py-2 rounded-lg border border-primary text-primary hover:bg-primary hover:text-primary-foreground font-semibold transition-all block text-center"
+                  >
                     Conocer más
-                  </button>
+                  </Link>
                 </div>
               </div>
             )

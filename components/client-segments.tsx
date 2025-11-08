@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import { Users, Briefcase, Zap, Building2 } from "lucide-react"
 
 const segments = [
@@ -9,6 +10,7 @@ const segments = [
     need: "Promocionar productos o servicios en redes",
     solution: "Videos rápidos, económicos y personalizados",
     color: "bg-primary",
+    href: "/demo",
   },
   {
     icon: Users,
@@ -16,6 +18,7 @@ const segments = [
     need: "Escalar producción sin contratar más staff",
     solution: "Servicio de outsourcing con IA + revisión humana",
     color: "bg-secondary",
+    href: "/demo",
   },
   {
     icon: Briefcase,
@@ -23,6 +26,7 @@ const segments = [
     need: "Crear contenido frecuente y visualmente atractivo",
     solution: "Plantillas IA adaptadas a su estilo",
     color: "bg-primary",
+    href: "/demo",
   },
   {
     icon: Building2,
@@ -30,6 +34,7 @@ const segments = [
     need: "Videos institucionales y formativos",
     solution: "Producción profesional optimizada por IA",
     color: "bg-secondary",
+    href: "/demo",
   },
 ]
 
@@ -76,9 +81,12 @@ export default function ClientSegments() {
                     </div>
                   </div>
 
-                  <button className="w-full mt-4 py-2 rounded-lg bg-primary text-primary-foreground font-semibold hover:bg-opacity-90 transition-all text-sm">
+                  <Link
+                    href={segment.href}
+                    className="w-full mt-4 py-2 rounded-lg bg-primary text-primary-foreground font-semibold hover:bg-opacity-90 transition-all text-sm block text-center"
+                  >
                     Solicitar Demo
-                  </button>
+                  </Link>
                 </div>
               </div>
             )
